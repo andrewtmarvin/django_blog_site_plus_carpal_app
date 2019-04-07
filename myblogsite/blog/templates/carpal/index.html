@@ -1,0 +1,162 @@
+{% load static %}
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Fredericka+the+Great" rel="stylesheet">
+
+    <title>Car Pal | Home</title>
+    <style>
+    html {
+    background-color: #D1D1D1;
+}
+.top-wrapper {
+    margin: 0px;
+    border-bottom: 1px black solid;
+    width: 100vw;
+    text-align: center;
+}
+h1 {
+    font-weight: 500;
+    font-family: 'Fredericka the Great', cursive;
+    text-align: center;
+}
+.main-btn {
+    font-family: ;
+    border-radius:50%;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    background-color: #DD7373;
+}
+
+#auth-btn {
+    padding:0px;
+    margin-top:30%;
+    color:#D1D1D1;
+    font-size:2em;
+    text-shadow: 2px 1px 4px;
+    font-family: 'Fredericka the Great', cursive;
+
+}
+
+p {
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5em;
+}
+
+h2, h3 {
+    font-family: 'Fredericka the Great', cursive;
+    text-align: center; 
+    font-size: 2em;
+}
+
+#map {
+    width: 500px;
+    height: 500px;
+    border: 1px solid gray;
+    margin: auto;
+}
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    h3 {
+      display: inline-block;
+      margin: 0;
+    }
+    #view-side {
+      border: 1px solid;
+      margin: auto; 
+      width: 100%; 
+      height: 500px;
+    }
+    #carpal-logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 150px;
+        heigh: auto;
+    }
+    #slide {
+        width:100px;
+    }
+    #submit-incident {
+        text-align:center;
+        display:block;
+        margin:auto;
+    }
+    #report-cond, #report-drunk {
+        margin-top:20px;
+        margin-bottom:0px;
+        width: 30vw;
+        display:inline-block;
+    }
+    </style>
+  </head>
+  <body>
+    <div class='top-wrapper card-panel center #607d8b blue-grey'>
+        <img src="{% static 'logo.png' %}" alt='carpal' id="carpal-logo">
+        <h1>Car Pal</h1><p>Dodging death made easy</p>
+   </div>
+
+    <div id="submit-incident">
+            <form action="{% url 'carpal:pothole' %}" method="post" id="report-cond">
+                {% csrf_token %}
+                <p style="display:inline;">Input lane number: </p><input name="lane" type="number" min=0 style="width:100px;"/><br>
+              <p style="display:inline;">Adjust GPS coordinates: </p><input id="slide" type="range" min="0" max="100" name="mod" /><br>
+                <button class="pulse" name="pothole">Report Poor Road Conditions</button>
+            </form>
+        <p style="font-size:3em;display:inline-block;">OR</p>
+        <div id="report-drunk">
+    <button class="pulse"><a href="{% url 'carpal:drunk' %}">Report Reckless Driver</a></button>
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+      <div style="height:50vh;">
+        {% include 'carpal/mymap.html' %}
+      </div>
+
+      <table>
+        <tr>
+          <th>Report Type</th>
+          <th>Report Time</th>
+          <th>License Plate</th>
+          <th>Lat</th>
+          <th>Long</th>
+          <th>Lane</th>
+        </tr>
+        {% for row in all reversed%}
+          <tr>
+            {% for item in row %}
+              <td>{{item}}</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </table>
+      <div class='top-wrapper card-panel center #607d8b blue-grey'>
+       <p>Car Pal 2019</p>
+ <button><a href="{% url 'carpal:auth'%}">Authenticate SmartCar</a></button>
+      </div>
+         
+
+    </div>
+  </body>
+</html>  

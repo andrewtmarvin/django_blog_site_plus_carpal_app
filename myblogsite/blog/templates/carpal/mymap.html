@@ -1,0 +1,221 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Google Maps - pygmaps </title>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&sensor=true_or_false&key=AIzaSyD4-8cGahf7ABQ34z66Pq1c2B6GOEr1Gec"></script>
+<script type="text/javascript">
+	function initialize() {
+		var centerlatlng = new google.maps.LatLng(39.635584, -105.221670);
+		var myOptions = {
+			zoom: 8,
+			center: centerlatlng,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+		var latlng = new google.maps.LatLng(38.980676, -105.104552);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/191970.png');
+		var marker = new google.maps.Marker({
+		title: "Pothole in lane: 3",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(40.491850, -104.419043);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/B22222.png');
+		var marker = new google.maps.Marker({
+		title: "License Plate: 7HGY508",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(40.960484, -104.385605);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/191970.png');
+		var marker = new google.maps.Marker({
+		title: "Pothole in lane: 4",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(40.293053, -104.458786);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/191970.png');
+		var marker = new google.maps.Marker({
+		title: "Pothole in lane: 3",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(40.709576, -105.253482);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/191970.png');
+		var marker = new google.maps.Marker({
+		title: "Pothole in lane: 2",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(40.711373, -107.046287);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/B22222.png');
+		var marker = new google.maps.Marker({
+		title: "License Plate: 7HGY508",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(37.875524, -104.008360);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/191970.png');
+		var marker = new google.maps.Marker({
+		title: "Pothole in lane: 2",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(37.433851, -106.603781);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/B22222.png');
+		var marker = new google.maps.Marker({
+		title: "License Plate: SDF45S",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(39.001234, -105.747816);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/B22222.png');
+		var marker = new google.maps.Marker({
+		title: "License Plate: 15F6SSS",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(40.407749, -106.104111);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/191970.png');
+		var marker = new google.maps.Marker({
+		title: "Pothole in lane: unknown",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(38.986050, -105.565308);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/191970.png');
+		var marker = new google.maps.Marker({
+		title: "Pothole in lane: 4",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(37.242241, -104.296173);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/191970.png');
+		var marker = new google.maps.Marker({
+		title: "Pothole in lane: unknown",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(37.834560, -106.410249);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/B22222.png');
+		var marker = new google.maps.Marker({
+		title: "License Plate: 55FS5D",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(38.711869, -107.338783);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/191970.png');
+		var marker = new google.maps.Marker({
+		title: "Pothole in lane: 2",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(39.987230, -107.042433);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/191970.png');
+		var marker = new google.maps.Marker({
+		title: "Pothole in lane: unknown",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(40.758383, -104.184004);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/B22222.png');
+		var marker = new google.maps.Marker({
+		title: "License Plate: 0SDF56S",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(40.033224, -104.850348);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/B22222.png');
+		var marker = new google.maps.Marker({
+		title: "License Plate: 565FSDD",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(37.767041, -105.650417);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/B22222.png');
+		var marker = new google.maps.Marker({
+		title: "License Plate: 4D5SF5S",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(40.766395, -105.397396);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/191970.png');
+		var marker = new google.maps.Marker({
+		title: "Pothole in lane: 3",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(40.295677, -104.139477);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/191970.png');
+		var marker = new google.maps.Marker({
+		title: "Pothole in lane: 8",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(40.355280, -107.851598);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/B22222.png');
+		var marker = new google.maps.Marker({
+		title: "License Plate: 7HGY508",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(39.635584, -105.221670);
+		var img = new google.maps.MarkerImage('D:/Dropbox/Django/BlogProject/venv/lib/site-packages/gmplot/markers/191970.png');
+		var marker = new google.maps.Marker({
+		title: "Pothole in lane: unknown",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+	}
+</script>
+</head>
+<body style="margin:0px; padding:0px;" onload="initialize()">
+	<div id="map_canvas" style="width: 100%; height: 100%;"></div>
+</body>
+</html>
