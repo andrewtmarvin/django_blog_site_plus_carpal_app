@@ -3,7 +3,7 @@ cachetools==3.1.0
 certifi==2019.3.9
 cffi==1.12.2
 chardet==3.0.4
-cryptography==2.6.1
+cryptography==3.2
 Django==2.2
 gmplot==1.2.0
 google-api-core==1.8.2
